@@ -1,0 +1,241 @@
+{
+  "board": {
+    "design_settings": {
+      "defaults": {
+        "board_outline_line_width": 0.1,
+        "copper_line_width": 0.2,
+        "copper_text_size_h": 1.5,
+        "copper_text_size_v": 1.5,
+        "copper_text_thickness": 0.3,
+        "other_line_width": 0.15,
+        "silk_line_width": 0.15,
+        "silk_text_size_h": 1.0,
+        "silk_text_size_v": 1.0,
+        "silk_text_thickness": 0.15
+      },
+      "diff_pair_dimensions": [],
+      "drc_exports": {
+        "drc_export_format": "report",
+        "drc_export_units": "mm",
+        "drc_export_report_categories": [
+          "board_edge_clearance",
+          "copper_edge_clearance",
+          "hole_clearance",
+          "holes_co_located",
+          "invalid_outline",
+          "items_not_allowed",
+          "missing_courtyard",
+          "missing_footprint",
+          "overlap",
+          "silk_over_copper",
+          "silk_edge_clearance",
+          "text_height",
+          "text_thickness",
+          "track_width",
+          "track_clearance",
+          "via_dimensions"
+        ]
+      },
+      "rules": {
+        "max_error": 0.005,
+        "min_clearance": 0.15,
+        "min_connection_width": 0.0,
+        "min_copper_edge_clearance": 0.2,
+        "min_hole_clearance": 0.2,
+        "min_hole_to_hole": 0.5,
+        "min_micro_via_diameter": 0.2,
+        "min_micro_via_drill": 0.1,
+        "min_resolved_spokes": 2,
+        "min_silk_clearance": 0.15,
+        "min_text_height": 0.8,
+        "min_text_thickness": 0.15,
+        "min_through_hole_diameter": 0.3,
+        "min_track_width": 0.15,
+        "min_via_annular_width": 0.05,
+        "min_via_diameter": 0.6,
+        "solder_mask_clearance": 0.0,
+        "solder_mask_min_width": 0.0,
+        "solder_paste_clearance": 0.0,
+        "solder_paste_margin_ratio": 0.0,
+        "use_height_for_length_calcs": true
+      },
+      "track_widths": [0.15, 0.2, 0.3, 0.5, 0.8, 1.0, 1.5, 2.0],
+      "via_dimensions": [
+        {"diameter": 0.6, "drill": 0.3},
+        {"diameter": 0.8, "drill": 0.4},
+        {"diameter": 1.0, "drill": 0.5}
+      ]
+    },
+    "layer_presets": [
+      {
+        "name": "Pocket-S 4-Layer",
+        "layers": [
+          {"name": "F.Cu", "type": "signal", "description": "Front Copper"},
+          {"name": "In1.Cu", "type": "signal", "description": "Inner Layer 1 (GND)"},
+          {"name": "In2.Cu", "type": "signal", "description": "Inner Layer 2 (Power)"},
+          {"name": "B.Cu", "type": "signal", "description": "Back Copper"}
+        ]
+      }
+    ],
+    "meta": {
+      "filename": "pocket-s.kicad_pcb",
+      "version": 1
+    },
+    "setup": {
+      "stackup": {
+        "copper_layer_count": 4,
+        "board_thickness_mm": 1.6,
+        "layers": [
+          {"name": "F.Cu", "type": "copper", "thickness_um": 35, "material": "copper"},
+          {"name": "F.Paste", "type": "solder_paste", "thickness_um": 0, "material": "solder paste"},
+          {"name": "F.Mask", "type": "solder_mask", "thickness_um": 25, "material": "solder mask"},
+          {"name": "dielectric_1", "type": "core", "thickness_um": 100, "material": "FR4", "epsilon_r": 4.5},
+          {"name": "In1.Cu", "type": "copper", "thickness_um": 35, "material": "copper"},
+          {"name": "dielectric_2", "type": "prepreg", "thickness_um": 700, "material": "FR4", "epsilon_r": 4.5},
+          {"name": "In2.Cu", "type": "copper", "thickness_um": 35, "material": "copper"},
+          {"name": "dielectric_3", "type": "core", "thickness_um": 100, "material": "FR4", "epsilon_r": 4.5},
+          {"name": "B.Cu", "type": "copper", "thickness_um": 35, "material": "copper"},
+          {"name": "B.Mask", "type": "solder_mask", "thickness_um": 25, "material": "solder mask"},
+          {"name": "B.Paste", "type": "solder_paste", "thickness_um": 0, "material": "solder paste"}
+        ]
+      },
+      "pad_to_mask_clearance": 0.0,
+      "solder_mask_min_width": 0.0,
+      "pad_to_paste_clearance_ratio": 0.0,
+      "paste_clearance_ratio": 0.0,
+      "allow_soldermask_bridges_in_footprints": true,
+      "tent_vias": true,
+      "remove_silk_below_footprints": false,
+      "remove_silk_below_solder_mask": false
+    }
+  },
+  "boards": [],
+  "cvpcb": {},
+  "erc": {},
+  "libraries": {
+    "pinned_footprint_libs": [],
+    "pinned_symbol_libs": []
+  },
+  "meta": {
+    "filename": "pocket-s.kicad_pro",
+    "version": 1
+  },
+  "net_settings": {
+    "classes": [
+      {
+        "name": "Default",
+        "clearance": 0.15,
+        "trace_width": 0.15,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "micro_via_diameter": 0.0,
+        "micro_via_drill": 0.0,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.15
+      },
+      {
+        "name": "Power",
+        "clearance": 0.2,
+        "trace_width": 0.5,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "micro_via_diameter": 0.0,
+        "micro_via_drill": 0.0,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.15
+      },
+      {
+        "name": "RF_50ohm",
+        "clearance": 0.3,
+        "trace_width": 0.3,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "micro_via_diameter": 0.0,
+        "micro_via_drill": 0.0,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.15
+      },
+      {
+        "name": "USB_Diff",
+        "clearance": 0.15,
+        "trace_width": 0.15,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "micro_via_diameter": 0.0,
+        "micro_via_drill": 0.0,
+        "diff_pair_gap": 0.12,
+        "diff_pair_via_gap": 0.12,
+        "diff_pair_width": 0.15
+      }
+    ],
+    "netclass_patterns": [
+      {"netclass": "Power", "pattern": "+3V3"},
+      {"netclass": "Power", "pattern": "+5V"},
+      {"netclass": "Power", "pattern": "VBAT"},
+      {"netclass": "Power", "pattern": "GND"},
+      {"netclass": "RF_50ohm", "pattern": "CC1101_RF*"},
+      {"netclass": "RF_50ohm", "pattern": "NFC_ANT*"},
+      {"netclass": "USB_Diff", "pattern": "USB_D*"},
+      {"netclass": "USB_Diff", "pattern": "USB_DP"},
+      {"netclass": "USB_Diff", "pattern": "USB_DM"}
+    ]
+  },
+  "pcbnew": {
+    "page_layout_descr_file": "",
+    "last_paths": {
+      "netlist": "",
+      "specctra_dsn": "",
+      "cadstar_pcb_archive": "",
+      "idf_v3": "",
+      "step": "",
+      "vrml": "",
+      "footprint_3dmodels": "",
+      "footprint_lib_dir": ""
+    },
+    "meta": {
+      "filename": "pocket-s.kicad_pcb"
+    }
+  },
+  "schematic": {
+    "annotate_start_num": 0,
+    "drawing": {
+      "dashed_lines_dash_length_ratio": 12.0,
+      "dashed_lines_gap_length_ratio": 3.0,
+      "default_line_thickness": 6.0,
+      "default_text_size": 50.0,
+      "field_names": [],
+      "intersheets_ref_own_page": false,
+      "intersheets_ref_prefix": "",
+      "intersheets_ref_short": false,
+      "intersheets_ref_show": false,
+      "junction_size_choice": 3,
+      "label_size_ratio": 0.375,
+      "pin_symbol_size": 25.0,
+      "reference_designator": "U",
+      "text_offset_ratio": 0.15
+    },
+    "meta": {
+      "filename": "pocket-s.kicad_sch",
+      "version": 0
+    },
+    "net_format_name": "",
+    "page_layout_descr_file": "",
+    "plot_directory": "",
+    "spice_command": "",
+    "subpart_first_id": 65,
+    "subpart_id_separator": 0
+  },
+  "sheets": [],
+  "text_variables": {
+    "BOARD_NAME": "Pocket-S",
+    "BOARD_VERSION": "v1.0",
+    "COMPANY": "Open Hardware Project",
+    "DESIGNER": "Pocket-S Team",
+    "DATE": "2025-06-03",
+    "REVISION": "1.0",
+    "LICENSE": "MIT / CERN-OHL-P-2.0"
+  }
+}
